@@ -1,6 +1,6 @@
 import React from 'react';
 import './directory.style.scss';
-import Menuitem from '../../components/menu-item.component.jsx/Menuitem.component';
+import Menuitem from '../menu-item/Menuitem.component';
 
 class Directory extends React.Component {
     constructor() {
