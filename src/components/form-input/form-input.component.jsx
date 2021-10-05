@@ -3,10 +3,10 @@ import './form-input.style.scss';
 
 const Forminput = ({handleChange, label, ...otherprops}) => (
     <div className='group'>
-        <input className='form-input' onchange={handleChange} {...otherprops} />
+        <input className='form-input' onChange={handleChange} {...otherprops} />
         {
             label ? (
-            <label className={`${null ? 'shrink' : '' } form-input-label`} >
+            <label className={`${otherprops.value.length ? 'shrink' : '' } form-input-label`} >
                 {label}
             </label>
             ) : null

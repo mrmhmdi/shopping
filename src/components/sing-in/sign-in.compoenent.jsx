@@ -21,7 +21,6 @@ class Signin extends React.Component {
          const {name, value} = event.target;
 
          this.setState({[name]: value})
-         console.log(value)
     }
 
     render() {
@@ -30,8 +29,20 @@ class Signin extends React.Component {
                 <h1>I already have an account</h1>
                 <span>sign in with you eamil and password.</span>
                 <form>
-                    <Forminput type='email' name='email' label='email' handleChange={this.handleChange} required />
-                    <Forminput type='password' name='password' label='password' handleChange={this.handleChange} required />
+                    <Forminput 
+                    type='email' 
+                    name='email' 
+                    label='email' 
+                    value={this.state.email}
+                    handleChange={this.handleChange} required />
+
+                    <Forminput 
+                    type='password' 
+                    name='password' 
+                    label='password'
+                    value={this.state.password} 
+                    handleChange={this.handleChange} required />
+
                     <input type='submit' name='submit' />
                 </form>
             </div>
