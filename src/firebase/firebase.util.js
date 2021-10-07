@@ -1,7 +1,3 @@
-// import * as firebase from 'firebase/compat/app';
-// import 'firebase/compat/auth';
-// import 'firebase/compat/firestore';
-
 import { initializeApp } from 'firebase/app';
 import { GoogleAuthProvider, getAuth, signInWithPopup } from 'firebase/auth';
 import { getFirestore } from "firebase/firestore";
@@ -17,7 +13,7 @@ const config = {
 };
 const app = initializeApp(config)
 
-const auth = getAuth();
+export const auth = getAuth();
 
 export const firestore = getFirestore();
 
